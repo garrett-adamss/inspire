@@ -11,8 +11,8 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Background').Background} */
   background = null
 
-  /** @type {import('./Models/Background').Background} */
-  background = null
+  /** @type {import('./Models/Quote').Quote} */
+  quote = null
 }
 
 export const ProxyState = new Proxy(new AppState(), {

@@ -4,9 +4,8 @@ import { sandboxApi } from "./AxiosService.js"
 
 class BackgroundService{
     async getBackground(){
-        console.log('LOADED TEST')
         const res = await sandboxApi.get('/images')
-        console.log('res.data', res.data)
+        // console.log('res.data', res.data)
         ProxyState.background = new Background(res.data)
     }
 }
