@@ -1,5 +1,6 @@
 import { BackgroundController } from "./Controllers/BackgroundController.js";
 import { QuoteController } from "./Controllers/QuoteController.js";
+import { ToDoController } from "./Controllers/ToDoController.js";
 import { WeatherController } from "./Controllers/WeatherController.js";
 
 class App {
@@ -8,6 +9,8 @@ class App {
   backgroundController = new BackgroundController()
 
   quoteController = new QuoteController()
+
+  todoController = new ToDoController()
 }
 
 window["app"] = new App();

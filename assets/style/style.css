@@ -5,3 +5,13 @@ body{
     min-height: 100vh;
     overflow-y: hidden;
   }
+.to-do-list{
+    height: 28vh;
+    background-color: rgb(198, 198, 198);
+    overflow-y: auto;
+    border: 2px solid;
+    border-radius: 3px;
+    border-color: #333232;
+    overflow-y: auto;
+    text-transform: capitalize;
+}

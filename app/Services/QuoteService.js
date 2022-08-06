@@ -6,9 +6,8 @@ import { sandboxApi } from "./AxiosService.js"
 
  class QuoteService{
     async getQuote(){
-        console.log("quote controller loaded")
         const res = await sandboxApi('/quotes')
-        console.log("res", res)
+        // console.log("res", res)
         ProxyState.quote = new Quote(res.data)
     }
  }
