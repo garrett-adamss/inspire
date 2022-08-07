@@ -6,7 +6,11 @@ export class Quote {
 
     get Template(){
         return`
-        <div class="text-light">Quote: ${this.content} by: ${this.author}</div>
+        <div class="text-center">
+        <p class="on-hover text-light m-0">${this.author}</p>
+        <div class="text-light m-0">Quote: ${this.content} by: ${this.author}</div>
+        </div>
+        
         `
     }
 }
