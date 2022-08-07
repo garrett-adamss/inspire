@@ -6,7 +6,7 @@ export class Quote {
 
     get Template(){
         return`
-        <div>Quote: ${this.content} by: ${this.author}</div>
+        <div class="text-light">Quote: ${this.content} by: ${this.author}</div>
         `
     }
 }

@@ -5,7 +5,7 @@ class ToDoService{
    async createToDo(newToDo){
     let res = await sandboxApi.post('/garrett', toDoFormData)
     let toDo = new ToDo(res.data)
-    ProxyState.
+    // ProxyState.
    }
 }
 

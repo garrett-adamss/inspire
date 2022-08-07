@@ -10,7 +10,7 @@ import { Pop } from "../Utils/Pop.js"
 // }
 
 //FOR OBJECT (ONLY ONE SO YOU PRINT ONE)
-function _drawWeather(){
+function _drawWeather() {
     let weather = ProxyState.weather
     document.getElementById('weather').innerHTML = weather.Template //id body .backgroundimg = img template that is url(imglink)
 }
@@ -18,8 +18,6 @@ function _drawWeather(){
 export class WeatherController {
     constructor() {
         ProxyState.on('weather', _drawWeather)
-        // _drawWeather() //
-        // _drawWeatherTest()
         this.getWeather()
     }
 
@@ -31,4 +29,13 @@ export class WeatherController {
             console.log('[Get Weather]', error)
         }
     }
+
+    // async toggleWeather() {
+    //     try {    
+    //     weatherService.toggleWeather()
+    //     } catch (error) {
+    //         Pop.error(error)
+    //         console.error('[toggle Weather]', error)
+    //     }
+    // }
 }

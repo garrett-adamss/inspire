@@ -3,7 +3,7 @@ import { quoteService } from "../Services/QuoteService.js";
 import { Pop } from "../Utils/Pop.js";
 
 function _drawQuote(){
-    let quote = ProxyState.quote
+    let quote = ProxyState.quote 
     document.getElementById('quote').innerHTML = quote.Template
 }
 
