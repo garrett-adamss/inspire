@@ -8,12 +8,13 @@ export class ToDo{
     get Template(){ 
         return`
         <div class="text-white">
-        <div>
+        <div class="d-flex justify-content-between m-1">
           <input type="checkbox" ${this.completed ? 'checked' : ''} onchange="app.todoController.toggleToDo('${this.id}')">
           <b>${this.description}</b>
+          <button class="selectable btn-outline-danger btn-sm text-dark" onclick="app.todoController.deleteToDo('${this.id}')"><i class ="mdi mdi-delete"></i></button>
+
         </div>
         <div>
-          <button class="selectable btn-outline-danger btn text-dark" onclick="app.todoController.deleteToDo('${this.id}')"><i class ="mdi mdi-delete"></i></button>
         </div>
       </div>
         `
