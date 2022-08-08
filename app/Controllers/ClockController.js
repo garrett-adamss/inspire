@@ -5,6 +5,8 @@ function _drawClock(){
     let min = time.getMinutes()
     let sec = time.getSeconds()
     let set = "AM"
+    min = checkTime(min);
+    sec = checkTime(sec);
 
     if(hour == 0){
         hour = 12
@@ -14,10 +16,14 @@ function _drawClock(){
         set = "PM"
     }
 
-    hour = hour < 10 ? 0 + hour : hour;
-    min = min < 10 ? 0 + min : min;
-    sec = sec < 10 ? 0 + sec : sec;
+    // hour = hour < 10 ? 0 + hour : hour;
+    // min = min < 10 ? 0 + min : min;
+    // sec = sec < 10 ? 0 + sec : sec;
 
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
     let currentTime = hour + ':' + min + ':' + sec + ' ' + set;
 
     document.getElementById('clock').innerHTML= currentTime
