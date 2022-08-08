@@ -1,11 +1,16 @@
+import { ProxyState } from "../AppState.js"
+import { ToDo } from "../Models/ToDo.js"
+import { sandboxApi } from "./AxiosService.js"
+
 class ToDoService{
    async getToDo(){
-    console.log('To Do Service loaded')
+      let res = await sandboxApi.get('/todos')
+      ProxyState.todo = res.data.map(t => new ToDo(t))
    }
-   async createToDo(newToDo){
-    let res = await sandboxApi.post('/garrett', toDoFormData)
+   async createToDo(toDoFormData){
+    let res = await sandboxApi.post('/todos', toDoFormData)
     let toDo = new ToDo(res.data)
-    // ProxyState.
+    ProxyState.todo = [...ProxyState.todo, toDo]
    }
 }
 

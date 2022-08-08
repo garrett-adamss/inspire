@@ -30,12 +30,9 @@ export class WeatherController {
         }
     }
 
-    // async toggleWeather() {
-    //     try {    
-    //     weatherService.toggleWeather()
-    //     } catch (error) {
-    //         Pop.error(error)
-    //         console.error('[toggle Weather]', error)
-    //     }
-    // }
+    toggleTemp(){
+        weatherService.toggleTemp()
+    }
+
+
 }

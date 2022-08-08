@@ -1,5 +1,3 @@
-import { ProxyState } from "../AppState.js"
-import { weatherService } from "../Services/WeatherService.js"
 
 export class Weather {
     constructor(data) {
@@ -9,21 +7,28 @@ export class Weather {
         this.temp = data.temp
         this.temp_max = data.temp_max
         this.temp_min = data.temp_min
+        this.click = false
     }
-
-    tempConversion(){
-        let temp = this.temp
-        let far = Math.round(((parseFloat(temp)-273.15)*1.8)+32)
-        return far
-    }
-
-
 
     get Template() {
         return `
-        <div class="text-light" onclick="">${this.tempConversion()}</div>
+        <div class="text-light no-select hover" onclick="app.weatherController.toggleTemp()">${this.convert} ${this.click ? "C" : "F"}</div>
         `
     }
+
+    get convert() { 
+        let w = 0;
+        if (this.click) {
+            let temp = this.temp
+            w = Math.round(parseFloat(temp)-273.15)
+        } else {
+            let temp = this.temp
+            w = Math.round(((parseFloat(temp)-273.15)*1.8)+32)
+        }
+        return (w)
+    }
 }
+
+
 
 

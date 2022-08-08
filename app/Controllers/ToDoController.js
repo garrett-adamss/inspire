@@ -27,19 +27,17 @@ export class ToDoController {
 
     async createToDo() {
         try {
+            window.event.preventDefault()
             let form = window.event.target
 
             let newToDo = {
-                id: { type: String, required: true, unique: true },
-                completed: { type: Boolean, required: true, default: false },
-                user: { type: String, required: true },
-                //You will need to provide a description
-                description: { type: String, required: true },
+                description: form.description.value
             }
             await todoService.createToDo(newToDo)
             form.reset()
         } catch (error) {
-
+            Pop.error(error)
+            console.log('[Create ToDo]', error);
         }
     }
 }

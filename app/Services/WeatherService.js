@@ -13,20 +13,12 @@ class WeatherService {
         ProxyState.weather = new Weather(res.data.main)
     }
 
-    // async toggleWeather() {
-    //     let temp = Weather(temp)
-    //     let cel = Math.round(parseFloat(temp)-273.15)
-    //     let far = Math.round(((parseFloat(temp)-273.15)*1.8)+32)
-    //     if (temp == far) {
-    //         temp == cel
-    //         console.log("set cel", cel);
-    //         return temp
-    //     } else {
-    //         temp == far
-    //         console.log("set far", far );
-    //         return temp
-    //     }
-    // }
+    toggleTemp(){
+        ProxyState.weather.click = !ProxyState.weather.click
+        ProxyState.weather = ProxyState.weather
+    }
+
+
 }
 
 export const weatherService = new WeatherService()
