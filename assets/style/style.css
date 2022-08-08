@@ -4,6 +4,7 @@ body{
     background-size: cover;
     min-height: 100vh;
     overflow-y: hidden;
+    position: relative;
   }
 .todo{
     height: 28vh;
@@ -14,4 +15,23 @@ body{
     border-color: #333232;
     overflow-y: auto;
     text-transform: capitalize;
+    position: absolute;
+    top: 68vh;
+    right: 2vw;
 }
+.clock{
+  position: absolute;
+  top: 43vh;
+  right: 45vw;
+}
+.quote{
+  position: absolute;
+  top: 82vh;
+  right: 43vw;
+}
+.weather{
+  position: absolute;
+  top: 3vh;
+  right: 73vw;
+}
+

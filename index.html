@@ -10,7 +10,7 @@
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
-    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <title>Inspire</title>
 </head>
 
@@ -19,30 +19,27 @@
   <main>
     <div class="container-fluid">
       <div class="row">
-        <div id="weather" class="text-dark"></div>
-        <div id="quote" class="text-dark"></div>
-
+        <div class="text-dark col-3 align-items-left weather"><h1 id="weather"></h1></div>
+        <div id="quote" class="text-dark quote col-6"></div>
         <div class='todo col-3 text-dark'>
-        <div id="form">
-          <!-- TO DO FORM -->
-          <!-- <form onsubmit="">
+          <div id="form">
+            <!-- TO DO FORM -->
+            <!-- <form onsubmit="">
             <label for="description">Add New To Do</label>
             <button type="submit"></button>
             <input class="elevation-2" type="text" id="description" name="description" preview="New To Do"><br>
           </form> -->
+          </div>
+          <div id="total"></div>
+          <div id="list">
+
+          </div>
+          
         </div>
-        <div id="list">
-
-        </div>
-        <div id="total"></div>
       </div>
-      
-
+      <div class="text-light clock">
+        <h1 id="clock"></h1>
       </div>
-      <div class="text-light">
-        <h1 class="" id="clock"></h1>
-      </div>
-
     </div>
     </div>
   </main>
