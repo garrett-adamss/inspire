@@ -5,7 +5,7 @@ body{
     min-height: 100vh;
     overflow-y: hidden;
   }
-.to-do-list{
+.todo{
     height: 28vh;
     background-color: rgb(198, 198, 198);
     overflow-y: auto;
