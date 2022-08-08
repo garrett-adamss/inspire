@@ -6,9 +6,9 @@ export class Quote {
 
     get Template(){
         return`
-        <div class="text-center">
-        <p class="on-hover text-light m-0 no-select">${this.author}</p>
-        <div class="text-light m-0"><h5>${this.content}</h5></div>
+        <div class="text-center no-select">
+        <p class="on-hover text-style m-0">${this.author}</p>
+        <div class="text-style m-0"><h5>${this.content}</h5></div>
         </div>
         
         `

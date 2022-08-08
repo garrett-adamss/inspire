@@ -34,4 +34,11 @@ body{
   top: 3vh;
   right: 73vw;
 }
+.text-style{
+  color:white;
+  text-shadow: 2px 2px #2f2f2f;
+}
+.hover:hover{
+  cursor: pointer;
+}
 

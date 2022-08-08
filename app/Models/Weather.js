@@ -12,7 +12,7 @@ export class Weather {
 
     get Template() {
         return `
-        <div class="text-light no-select hover" onclick="app.weatherController.toggleTemp()">${this.convert} ${this.click ? "C" : "F"}</div>
+        <div class="text-style no-select hover" onclick="app.weatherController.toggleTemp()">${this.convert} ${this.click ? "C" : "F"}</div>
         `
     }
 
